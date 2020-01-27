@@ -6,6 +6,17 @@
     "description": "Digital Twin Application, unfinished."
   },
   "paths": {
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    },
+    "security": {
+      "0": {
+        "basicAuth": []
+      }
+    },
     "/user": {
       "post": {
         "description": "Creates a new user",
