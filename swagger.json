@@ -1,22 +1,11 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.0.1",
   "info": {
     "title": "DTApp",
     "version": "0.0.1",
     "description": "Digital Twin Application, unfinished."
   },
   "paths": {
-    "securitySchemes": {
-      "basicAuth": {
-        "type": "http",
-        "scheme": "basic"
-      }
-    },
-    "security": {
-      "0": {
-        "basicAuth": []
-      }
-    },
     "/user": {
       "post": {
         "description": "Creates a new user",
@@ -75,6 +64,11 @@
     },
     "/user/token": {
       "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "description": "Adds a token to user (used for fitbit auth)",
         "tags": [
           "fitbit"
@@ -114,6 +108,12 @@
     }
   },
   "components": {
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    },
     "schemas": {
       "User": {
         "type": "object",
