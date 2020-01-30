@@ -144,6 +144,42 @@
             },
             "required": false,
             "description": "Numeric limit of entries to retrieve"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false,
+            "description": "Numeric offset of entries to skip"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "schema": {
+              "type": "string"
+            },
+            "required": false,
+            "description": "Data type"
+          },
+          {
+            "in": "query",
+            "name": "startDate",
+            "schema": {
+              "type": "int"
+            },
+            "required": false,
+            "description": "Start date to filter after"
+          },
+          {
+            "in": "query",
+            "name": "endDate",
+            "schema": {
+              "type": "int"
+            },
+            "required": false,
+            "description": "End date to filter before"
           }
         ],
         "responses": {
