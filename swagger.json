@@ -155,8 +155,11 @@
                   "type": "object",
                   "properties": {
                     "token": {
-                      "type": "string",
-                      "description": "The entries"
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "description": "A sample entry"
+                      }
                     }
                   }
                 }
