@@ -147,8 +147,21 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Returns samples"
+          "default": {
+            "description": "Sample entries requested",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string",
+                      "description": "The entries"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
