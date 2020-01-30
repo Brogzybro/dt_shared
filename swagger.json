@@ -158,7 +158,7 @@
             "in": "query",
             "name": "type",
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/Type"
             },
             "required": false,
             "description": "Data type"
@@ -251,6 +251,15 @@
             "type": "integer"
           }
         }
+      },
+      "Type": {
+        "type": "string",
+        "enum": [
+          "heartRate",
+          "distance",
+          "elevation",
+          "stepCount"
+        ]
       }
     }
   },
