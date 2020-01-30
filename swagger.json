@@ -155,7 +155,32 @@
                   "type": "array",
                   "items": {
                     "type": "object",
-                    "description": "A sample entry"
+                    "properties": {
+                      "_id": {
+                        "type": "string"
+                      },
+                      "user": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "startDate": {
+                        "type": "string"
+                      },
+                      "endDate": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "source": {
+                        "type": "string"
+                      },
+                      "__v": {
+                        "type": "integer"
+                      }
+                    }
                   }
                 }
               }
