@@ -154,33 +154,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "type": "object",
-                    "properties": {
-                      "_id": {
-                        "type": "string"
-                      },
-                      "user": {
-                        "type": "string"
-                      },
-                      "value": {
-                        "type": "integer"
-                      },
-                      "startDate": {
-                        "type": "string"
-                      },
-                      "endDate": {
-                        "type": "string"
-                      },
-                      "type": {
-                        "type": "string"
-                      },
-                      "source": {
-                        "type": "string"
-                      },
-                      "__v": {
-                        "type": "integer"
-                      }
-                    }
+                    "$ref": "#/components/schemas/Sample"
                   }
                 }
               }
@@ -210,6 +184,35 @@
           },
           "password": {
             "type": "string"
+          }
+        }
+      },
+      "Sample": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          },
+          "startDate": {
+            "type": "integer"
+          },
+          "endDate": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "__v": {
+            "type": "integer"
           }
         }
       }
