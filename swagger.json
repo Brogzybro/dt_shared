@@ -258,7 +258,8 @@
           "heartRate",
           "distance",
           "elevation",
-          "stepCount"
+          "stepCount",
+          "sleep"
         ]
       }
     }
