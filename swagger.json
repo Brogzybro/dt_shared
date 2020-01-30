@@ -123,6 +123,30 @@
           }
         }
       }
+    },
+    "/samples": {
+      "get": {
+        "description": "Get samples",
+        "tags": [
+          "withings"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "limit",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false,
+            "description": "Numeric limit of entries to retrieve"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns samples"
+          }
+        }
+      }
     }
   },
   "components": {
