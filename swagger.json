@@ -128,7 +128,7 @@
       "get": {
         "description": "Get samples",
         "tags": [
-          "withings"
+          "samples"
         ],
         "parameters": [
           {
