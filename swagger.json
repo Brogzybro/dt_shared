@@ -137,7 +137,7 @@
         ],
         "parameters": [
           {
-            "in": "path",
+            "in": "query",
             "name": "limit",
             "schema": {
               "type": "integer"
