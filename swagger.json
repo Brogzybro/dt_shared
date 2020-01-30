@@ -126,6 +126,11 @@
     },
     "/samples": {
       "get": {
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
         "description": "Get samples",
         "tags": [
           "samples"
