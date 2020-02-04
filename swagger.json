@@ -223,6 +223,16 @@
           }
         }
       },
+      "Type": {
+        "type": "string",
+        "enum": [
+          "heartRate",
+          "distance",
+          "elevation",
+          "stepCount",
+          "sleep"
+        ]
+      },
       "Sample": {
         "type": "object",
         "properties": {
@@ -242,7 +252,7 @@
             "type": "integer"
           },
           "type": {
-            "type": "string"
+            "$ref": "#/components/schemas/Type"
           },
           "source": {
             "type": "string"
@@ -251,16 +261,6 @@
             "type": "integer"
           }
         }
-      },
-      "Type": {
-        "type": "string",
-        "enum": [
-          "heartRate",
-          "distance",
-          "elevation",
-          "stepCount",
-          "sleep"
-        ]
       }
     }
   },
