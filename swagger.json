@@ -113,11 +113,6 @@
     },
     "/fitbit/auth": {
       "get": {
-        "security": [
-          {
-            "basicAuth": []
-          }
-        ],
         "description": "Auth fitbit",
         "tags": [
           "fitbit"
@@ -125,7 +120,7 @@
         "parameters": [
           {
             "in": "query",
-            "name": "limit",
+            "name": "token",
             "schema": {
               "type": "string"
             },
