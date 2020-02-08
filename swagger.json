@@ -111,6 +111,35 @@
         }
       }
     },
+    "/fitbit/auth": {
+      "get": {
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "description": "Auth fitbit",
+        "tags": [
+          "fitbit"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "User token retrieved from /user/token"
+          }
+        ],
+        "responses": {
+          "302": {
+            "description": "Redirect to fitbit auth website"
+          }
+        }
+      }
+    },
     "/withings/auth": {
       "get": {
         "description": "Starts the authentication process for withings api",
