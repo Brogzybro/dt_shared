@@ -309,7 +309,15 @@
           "sleep",
           "diastolicBloodPressure",
           "systolicBloodPressure",
-          "ecg"
+          "ecg",
+          "weight",
+          "fatFreeMass",
+          "fatRatio",
+          "fatMassWeight",
+          "bodyTemp",
+          "muscleMass",
+          "boneMass",
+          "pulseWaveVelocity"
         ]
       },
       "Sample": {
