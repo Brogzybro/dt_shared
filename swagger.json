@@ -283,6 +283,34 @@
           }
         }
       }
+    },
+    "/devices": {
+      "get": {
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "description": "Get devices",
+        "tags": [
+          "devices"
+        ],
+        "responses": {
+          "default": {
+            "description": "List of devices",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Device"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -355,6 +383,23 @@
           },
           "__v": {
             "type": "integer"
+          }
+        }
+      },
+      "Device": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "battery": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
           }
         }
       }
