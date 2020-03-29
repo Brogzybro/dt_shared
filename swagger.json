@@ -400,6 +400,8 @@
           "sharing"
         ],
         "requestBody": {
+          "description": "Username of user to share with",
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -411,9 +413,7 @@
                   }
                 }
               }
-            },
-            "required": true,
-            "description": "Username of user to share with"
+            }
           }
         },
         "responses": {
