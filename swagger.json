@@ -3,7 +3,7 @@
   "info": {
     "title": "Digital Twin for Health Data",
     "version": "1.0.0",
-    "description": "Welcome to the Digital Twin API :) This API can be used to manage users, create connections to new services like Fitbit and WIthings, retrieve samples and devices saved for a user and those shared with them."
+    "description": "Welcome to the Digital Twin API. This API can be used to manage users, create connections to new services like Fitbit and WIthings, retrieve samples and devices saved for a user and those shared with them."
   },
   "paths": {
     "/": {
