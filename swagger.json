@@ -568,7 +568,8 @@
         "type": "object",
         "required": [
           "password",
-          "username"
+          "username",
+          "birthDate"
         ],
         "properties": {
           "username": {
@@ -576,6 +577,9 @@
           },
           "password": {
             "type": "string"
+          },
+          "birthDate": {
+            "type": "integer"
           }
         }
       },
