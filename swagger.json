@@ -554,6 +554,24 @@
           }
         }
       }
+    },
+    "/prediction": {
+      "get": {
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "description": "Get samples",
+        "tags": [
+          "prediction"
+        ],
+        "responses": {
+          "default": {
+            "description": "Sample entries requested"
+          }
+        }
+      }
     }
   },
   "components": {
