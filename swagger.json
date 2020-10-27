@@ -562,13 +562,13 @@
             "basicAuth": []
           }
         ],
-        "description": "Get samples",
+        "description": "Get a prediction",
         "tags": [
           "prediction"
         ],
         "responses": {
           "default": {
-            "description": "Sample entries requested"
+            "description": "User must have logged Blood pressure"
           }
         }
       }
