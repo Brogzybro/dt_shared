@@ -567,8 +567,27 @@
           "prediction"
         ],
         "responses": {
-          "default": {
-            "description": "User must have logged Blood pressure"
+          "200": {
+            "description": "Shares removed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "systolic": {
+                      "type":"integer",
+                      "description": "Error message"
+                    },
+                    "diastolic": {
+                      "type":"integer"
+                    },
+                    "risk": {
+                      "type":"object"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
