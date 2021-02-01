@@ -568,26 +568,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Shares removed",
+            "description": "Risk based on diastolic and systolic blood pressure",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
                     "systolic": {
-                      "type":"integer",
-                      "description": "Error message"
+                      "type": "integer"
                     },
                     "diastolic": {
-                      "type":"integer"
+                      "type": "integer"
                     },
                     "risk": {
-                      "type":"object"
+                      "type": "object"
                     }
                   }
                 }
               }
             }
+          },
+          "default": {
+            "description": "User must have logged Blood pressure"
           }
         }
       }
