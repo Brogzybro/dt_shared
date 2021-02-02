@@ -628,9 +628,6 @@
           },
           "400": {
             "description": "Other/Unknown"
-          },
-          "422": {
-            "description": "User already exists"
           }
         }
       }
@@ -653,18 +650,26 @@
           }
         ],
         "responses": {
-          "default": {
+          "200": {
             "description": "List of sample data",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
                   "items": {
-                    "$ref": "#/components/schemas/Sample"
+                    "type": "object"
                   }
                 }
               }
             }
+          },
+          "400": {
+            "description": "No certificate found"
+          },
+          "401": {
+            "description": "Certificate is not approved"
+          },
+          "default": {
+            "description": "Request accepted"
           }
         }
       }
@@ -713,6 +718,62 @@
         "responses": {
           "default": {
             "description": "Certificate disapproved"
+          }
+        }
+      }
+    },
+    "/certificate/getAllApprovedCerts": {
+      "get": {
+        "description": "Get all approved Certificates",
+        "tags": [
+          "certificate"
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Certificates",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Certificate"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "No certificate found"
+          },
+          "default": {
+            "description": "Request accepted"
+          }
+        }
+      }
+    },
+    "/certificate/getAllDisapprovedCerts": {
+      "get": {
+        "description": "Get all disapproved Certificates",
+        "tags": [
+          "certificate"
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Certificates",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Certificate"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "No certificate found"
+          },
+          "default": {
+            "description": "Request accepted"
           }
         }
       }
@@ -904,56 +965,11 @@
           "reasonsForDataNeed": {
             "type": "string"
           },
-          "age": {
-            "type": "integer"
-          },
-          "diastolicBloodPressure": {
-            "type": "integer"
-          },
-          "systolicBloodPressure": {
-            "type": "integer"
-          },
-          "heartRate": {
-            "type": "integer"
-          },
-          "distance": {
-            "type": "integer"
-          },
-          "elevation": {
-            "type": "integer"
-          },
-          "stepCount": {
-            "type": "integer"
-          },
-          "sleep": {
-            "type": "integer"
-          },
-          "ecg": {
-            "type": "integer"
-          },
-          "wieght": {
-            "type": "integer"
-          },
-          "fatFreeMass": {
-            "type": "integer"
-          },
-          "fatRatio": {
-            "type": "integer"
-          },
-          "fatMassWeight": {
-            "type": "integer"
-          },
-          "bodyTemp": {
-            "type": "integer"
-          },
-          "muscleMass": {
-            "type": "integer"
-          },
-          "boneMass": {
-            "type": "integer"
-          },
-          "pulseWaveVelocity": {
-            "type": "integer"
+          "dataTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
